@@ -1,0 +1,185 @@
+/* 	------------------------------ */
+/*	PT-Brummer			 	 */
+/*	- main style sheet -		 */
+/*	eveca GmbH, 2010-03-26		 */
+/*  	------------------------------ */
+
+/*	Table of Contents */
+/*
+	1. GENERAL SETTINGS
+	   1.1 BROWSER RESET
+	   1.2 CLEARFIX
+	   1.3 GENERAL STYLES
+	2. STRUCTURE
+	   2.1 MENUTOP
+	   2.2 HEADER
+	   2.3 MAINBODYWRAP
+	       2.3.1 menu1
+	       2.3.2 infoLeft
+	       2.3.3 mainContent
+	       2.3.4 infoRight
+	   2.4 MAINBODYBOTTOM
+	   2.5 FOOTER
+	3. CSC
+	4. CONTACT
+	5. ZW_GMAP 
+*/
+
+
+/* 	------------------------------ */
+/* 1. GENERAL SETTINGS */
+/* 	------------------------------ */
+
+/* 1.1 BROWSER RESET */
+/*
+Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.4.1
+*/
+html{color:#000;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym {border:0;font-variant:normal;}
+/* to preserve line-height and selector appearance */
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+/*because legend doesn't inherit in IE */
+legend{color:#000;}
+
+/* 1.2 CLEARFIX */
+.clear:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; }
+.clear { display:inline-block; }
+/* hide from IE Mac \*/
+* html .clearfix { height: 1%; }
+.clear { display:block; }
+
+
+/* 1.3 GENERAL STYLES */
+
+html {  background: #97bf12; overflow-y: scroll; }
+body { text-align: center; font-family: helvetica, Arial, sans-serif; color: #87888a; font-size: 12px; line-height: 21px; }
+a { color: #6AB023; text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { margin: 0px 0px 31px 0px; font-size: 21px; line-height: 25px; color: #89ba1c; font-weight: normal; }
+h2 { margin: 0px 0px 22px 0px; padding-top: 17px; font-weight: normal;  font-size: 14px; line-height: 18px;  color: #646567; }
+#start h2 { margin: 0px 0px 12px 0px; padding-top: 0px; font-weight: normal; font-size: 21px; line-height: 25px;  color: #646567; }
+h3 {  margin: 0px 0px 12px 0px; padding-top: 24px; font-weight: bold;  font-size: 12px; line-height: 18px;  color: #646567; }
+p {  }
+#oneCol h1, #oneCol h2, #oneCol h3, #oneCol p { padding-right: 257px; }
+#mainContent ul { margin: 10px 0px 10px 1px; }
+#mainContent ul li { background: url(../layout/content/list.png) 0px 9px no-repeat; margin-bottom: 5px; padding-left: 10px; font-size: 12px; line-height: 21px; }
+
+
+/* 	------------------------------ */
+/* 2. STRUCTURE */
+/* 	------------------------------ */
+
+/* 2.1 MENUTOP */
+#menuTop { width: 802px; height: 25px; margin: 16px auto 0px auto; text-align: left; }
+#menuTop li { float: left; }
+#menuTop a { padding-right: 12px; color: #fff; font-size: 11px; text-transform: uppercase; background: url(../layout/header/background-menuTop.gif) right 5px no-repeat; }
+#menuTop a:hover, #menuTop a.active  { text-decoration: none; color: #646567; }
+#menuTop .menuTopLast a { padding-right: 0px; background-image: none; }
+#menuLanguages { float: left; width: 50%; }
+div#menu0 { float: right; width: 50%; text-align: right; }
+
+#menu0 ul li { float: right; }
+
+/* 2.2 HEADER */
+#header { clear: both; width: 802px; height: 134px; margin: 0px auto 0px auto; text-align: left; background: url(../layout/header/background-header.png) no-repeat 0px 91px }
+#logo { float: left; width: 307px; height: 89px; background: url(../layout/header/pt-brummer_logo.png) no-repeat; }
+#logo img { display: none; }
+#topicImage { float: right; width: 495px; text-align: right; }
+#topicImage img { width: 489px; height: 89px; }
+#topicColor { clear: both; float: right; margin-top: 4px; }
+#topicColor img { width: 143px; height: 27px; }
+
+/* 2.3 MAINBODYWRAP */
+#mainbodyWrap { clear: both; position: relative; width: 802px; margin: 0px auto 0px auto; text-align: left; background: url(../layout/mainbody/background-mainbodyWrap.png) repeat-y; }
+	
+	/* 2.3.1 menu1 */
+	#menu1 { position: absolute; width: 188px; top: -7px; left: 12px; padding-top: 2px; background: url(../layout/navigation/menu1/divider_list.png) no-repeat; }
+	#menu1 li { display: block; height: 30px; background: url(../layout/navigation/menu1/divider_list.png) no-repeat bottom left; }
+	#menu1 li a { display: block; width: 188px; height: 22px; padding: 0px 0px; overflow: hidden; background: no-repeat 0px -2px; text-indent: 999em; white-space: nowrap; outline: none; }
+	#menu1 a:hover { background-position: 0px -28px; }
+	#menu1 a.active { height: 22px; background-position: 0px -54px; }
+	#menu1 a.active:hover { background-position: 0px -54px; }
+
+	
+	/* 2.3.2 infoLeft */
+	#infoLeft { position: absolute; width: 188px; bottom: 17px; left: 12px; }
+	
+	/* 2.3.3 mainContent */
+	#mainContent { position: static; width: 413px; min-height: 450px; margin: 0px auto 17px 229px; }
+	#contentLeftCol { float: left; width: 206px; }
+	#contentRightCol { float: right; width: 206px; }
+	
+	
+	/* 2.3.4 infoRight */
+	#infoTopRight, #infoTopRightEnglish { position: absolute; width: 120px; top: 99px; right: 12px; text-align: center; }
+	#infoTopRightEnglish { top: 78px; }
+	#infoRight { position: absolute; width: 120px; bottom: 17px; right: 10px; text-align: right; }
+
+
+/* 2.4 MAINBODYBOTTOM */
+#mainbodyBottom { clear: both; width: 802px; height: 10px; margin: 0px auto 0px auto; text-align: left; background: url(../layout/mainbody/background-mainbodyBottom.png) no-repeat; }
+
+/* 2.5 FOOTER */
+#footer { clear: both; width: 806px; margin: 12px auto 0px auto; padding-bottom: 12px; color: #fff; font-size: 10px; line-height: 12px; text-transform: uppercase; }
+
+
+/* 	------------------------------ */
+/* 3. CSC */
+/* 	------------------------------ */
+.csc-textpic-imagewrap { padding-bottom: 14px !important; }
+
+.csc-uploads-icon { vertical-align: top; padding-right: 10px; }
+.csc-uploads-fileName { padding-top: 1px; }
+
+table.contenttable { margin: 0px 0px 22px 0px; border: 2px solid #97bf12; }
+.contenttable th, .contenttable td { border: 1px solid #87888a; padding: 5px; vertical-align: top; }
+.contenttable th { background: #97bf12; text-align: center; font-weight: bold; color: #fff; }
+.contenttable td { background: #fafafa; }
+.contenttable td strong { color: #97bf12; }
+
+/* 	------------------------------ */
+/* 4. CONTACT */
+/* 	------------------------------ */
+
+
+#contact { width: 413px; background: #fff; }
+#contact legend { display: none; }
+#contact label { clear: both; float: left; width: 100px; display: block; font-weight: bold; }
+#contact input,
+#contact textarea { width: 280px; }
+#contact textarea { height: 150px; }
+#contact .tx_powermail_pi1_fieldwrap_html_submit { margin-left: 100px; }
+div.tx_powermail_pi1_fieldwrap_html { margin: 16px 0; }
+
+p.tx_powermail_pi1_fieldwrap_html_checkbox_title { display: block; clear: both; margin-left: 100px; font-weight: bold; }
+.powermail_check_inner { clear: both; width: auto; margin: 5px 0px 5px 100px; }
+#contact .powermail_check_inner input { float: left; width: auto; margin: 3px 0px 0px 0px; border: none; }
+#contact .powermail_check_inner label { float: none; display: inline;  width: auto; padding-left: 15px; font-weight: normal; }
+
+
+#contact .powermail_submit_uid5,
+#contact .powermail_submit_uid10,
+#contact .powermail_submit_uid21 { clear: both;  width: 100px; }
+#powermaildiv_uid11,
+#powermaildiv_uid13,
+#powermaildiv_uid19 { width: 280px; margin-left: 100px; font-size: 11px; }
+
+
+/* 	------------------------------ */
+/* 5. ZW_GMAP */
+/* 	------------------------------ */
+
+.gmapDir { padding-bottom: 5px; }

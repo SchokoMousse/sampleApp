@@ -1,0 +1,66 @@
+/* 	------------------------------ */
+/*	PT-Brummer				 */
+/*	- print style sheet -		 */
+/*	eveca GmbH, 2009-10-30		 */
+/*  	------------------------------ */
+/*	Table of Contents */
+/*
+   1. HIDE UNNECESSARY INFO
+   2. RESETS
+      2.1  RESET BACKGROUND
+      2.2  RESET HEIGHT
+      2.3  RESET WIDTH
+      2.4 RESET FLOATING
+   3.  CONTENT STYLES
+   4.  STRUCTURE ELEMENTS
+*/
+
+
+/* -------------------------------------------------------------
+   1.  HIDE UNNECESSARY INFO
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#menuTop,
+#menu1 { display: none; }
+
+
+/* -------------------------------------------------------------
+   2.  RESETS
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+/* 2.1 RESET BACKGROUND */ 
+#logo { background: none }
+
+
+/* 2.2 RESET HEIGHT */ 
+#logo { height: auto; }
+
+
+/* 2.3 RESET WIDTH */ 
+#logo { width: auto; }
+
+
+/* 2.4 RESET FLOATING */ 
+#logo { float: none; }
+
+
+
+/* -------------------------------------------------------------
+   3.  CONTENT STYLES
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+body { color: #000; }
+
+h1 { margin: 1cm 0; font-weight: normal; }
+h2 { font-weight: bold; }
+h3 { font-weight: bold; }
+h4 { font-weight: bold; }
+
+a { color: #000; text-decoration: none; font-weight: bold; }
+
+
+/* -------------------------------------------------------------
+   4.  STRUCTURE ELEMENTS
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#logo { position: static; }
+#logo img { display: block; }
+
