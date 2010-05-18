@@ -7,7 +7,7 @@ module ApplicationHelper
     if @title.nil?
       baseTitle
     else
-      "#{baseTitle} | #{@title}"
+      "#{baseTitle} | #{h(@title)}"
     end
   end
   
