@@ -1,4 +1,18 @@
 # == Schema Information
+# Schema version: 20100518140220
+#
+# Table name: users
+#
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
+#
+
+# == Schema Information
 # Schema version: 20100518090808
 #
 # Table name: users
@@ -142,6 +156,25 @@ describe User do
       end
     end
     
+  end
+
+  describe "remember me" do
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+    
+    it "should have a remember_me! method" do
+      @user.should respond_to(:remember_me!)
+    end
+    
+    it "hsould have a remember token" do
+      @user.should respond_to(:remember_token)
+    end
+    
+    it "should set the remember token" do
+      @user.remember_me!
+      @user.remember_token.should_not be_nil
+    end
   end
 
 end

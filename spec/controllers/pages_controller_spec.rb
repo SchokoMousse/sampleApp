@@ -68,8 +68,6 @@ describe PagesController do
                                 @baseTitle + "Home")
     end
   end
-
-  
   
   
 end

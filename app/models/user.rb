@@ -1,4 +1,18 @@
 # == Schema Information
+# Schema version: 20100518140220
+#
+# Table name: users
+#
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
+#
+
+# == Schema Information
 # Schema version: 20100518090808
 #
 # Table name: users
@@ -38,6 +52,11 @@ class User < ActiveRecord::Base
     self.encrypted_password == encrypt(submitted_password)
   end
   
+  def remember_me!
+    self.remember_token = encrypt("#{salt}--#{id}")
+    save_without_validation
+  end
+  
   def self.authenticate(email, submitted_password)
     user = find_by_email(email)
     return nil if user.nil?
@@ -47,8 +66,10 @@ class User < ActiveRecord::Base
   private
     
     def encrypt_password
-      self.salt = make_salt
-      self.encrypted_password = encrypt(password)
+      unless password.nil?
+        self.salt = make_salt
+        self.encrypted_password = encrypt(password)
+      end
     end
     
     def encrypt(string)
