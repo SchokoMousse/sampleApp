@@ -52,7 +52,7 @@ describe SessionsController do
         controller.should be_signed_in
       end
       
-      it "should redirecte to the user's show page" do
+      it "should redirect to the user's show page" do
         post :create, :session => @attr
         redirect_to user_path(@user)
       end

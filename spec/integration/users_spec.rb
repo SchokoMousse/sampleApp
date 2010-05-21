@@ -51,6 +51,13 @@ describe "Users" do
         click_link "Sign out"
         controller.should_not be_signed_in
       end
+      
+      it "should sign a user in and let the signup button disappear" do
+        user = Factory(:user)
+        integration_sign_in(user)
+        visit root_path
+        response.should_not have_tag("a[href=?]", signup_path)
+      end
     end
       #   
       # describe "sign in and out and back in" do
