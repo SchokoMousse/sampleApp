@@ -59,7 +59,8 @@ describe "Users" do
         response.should_not have_tag("a[href=?]", signup_path)
       end
     end
-      #   
+    
+ #   
       # describe "sign in and out and back in" do
       #   it "should sign a user in and out and back in" do
       #     user = Factory(:user)

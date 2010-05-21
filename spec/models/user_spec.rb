@@ -1,4 +1,19 @@
 # == Schema Information
+# Schema version: 20100521122916
+#
+# Table name: users
+#
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
+#  remember_token     :string(255)
+#
+
+# == Schema Information
 # Schema version: 20100518140220
 #
 # Table name: users
@@ -37,10 +52,6 @@ describe User do
     }
   end
   
-  it "should create a new instance given valid attributes" do
-    User.create!(@attr)
-  end
-
   it "should create a new instance given valid attributes" do
     User.create!(@attr)
   end
@@ -174,6 +185,25 @@ describe User do
     it "should set the remember token" do
       @user.remember_me!
       @user.remember_token.should_not be_nil
+    end
+  end
+
+  describe "admin attribute" do
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+
+    it "should respond to admin" do
+      @user.should respond_to(:admin)
+    end
+
+    it "should not be an admin by default" do
+      @user.should_not be_admin
+    end
+
+    it "should be convertible to an admin" do
+      @user.toggle!(:admin)
+      @user.should be_admin
     end
   end
 
